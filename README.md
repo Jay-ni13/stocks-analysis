@@ -103,7 +103,7 @@ After the code has been refactored, the run time of the script is 1/3 of the ini
 ## Summary
 
 ### Code Refactoring
-There is a detailed statement on the advantages and disadvantages of refactoring code in general.
+In general, refactoring code is advantageous for streamling the code to make it easier to use and improving readability, but it can be extremely time consuming as variables and methods are renamed and moved. Trying to refactor a longer code by hand without understanding how each line relates to the next is as likely to cause new bugs as it is to remove old bugs. Hopefully, an end result of faster programming will offset the time consumed by refactoring.
 
 ### VBA Script Performance
-There is a detailed statement on the advantages and disadvantages of the original and refactored VBA script. 
+The initial VBA script for the green stocks analysis peformed quite well for the scope of the project, but it was limited to that specific dataset. The refactored script ran faster than the inital script and is more flexible to utilize for a larger dataset, but the macro's overall reliability depends on the same spreadsheet organization and datapoint positioning and values being mirrored in any subsequent datasets it analyzes. 
