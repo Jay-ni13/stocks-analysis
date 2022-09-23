@@ -11,15 +11,13 @@ A financal consultant provided us with data on several green energy stocks seeki
 ### Green Stocks Analysis
 To provide on option for running the analysis on different years' datasets, the first prompt initiated by the macro asks for the desired year.
 
-'''
 
     yearValue = InputBox("What year would you like to run the analysis on?")
 
-'''
 
 The 3012 rows of data are then categorized according to the stock option's abbreviated title (or ticker); in this dataset, there are 12 different green stock options.
 
-'''
+
 Dim tickers(12) As String
     
     tickers(0) = "AY"
@@ -34,7 +32,7 @@ Dim tickers(12) As String
     tickers(9) = "SPWR"
     tickers(10) = "TERP"
     tickers(11) = "VSLR"
-'''
+
 
 The number of rows in the dataset is accounted for by the following:
 
