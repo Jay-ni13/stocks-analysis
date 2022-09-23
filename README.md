@@ -18,7 +18,7 @@ To provide on option for running the analysis on different years' datasets, the 
 The 3012 rows of data are then categorized according to the stock option's abbreviated title (or ticker); in this dataset, there are 12 different green stock options.
 
 
-Dim tickers(12) As String
+    Dim tickers(12) As String
     
     tickers(0) = "AY"
     tickers(1) = "CSIQ"
@@ -36,16 +36,16 @@ Dim tickers(12) As String
 
 The number of rows in the dataset is accounted for by the following:
 
-'''
-    RowCount = Cells(Rows.Count, "A").End(xlUp).Row
-  'rowEnd code taken from https://stackoverflow.com/questions/18088729/row-count-where-data-exists
-'''
+
+        RowCount = Cells(Rows.Count, "A").End(xlUp).Row
+        'rowEnd code taken from https://stackoverflow.com/questions/18088729/row-count-where-data-exists
+
 
 The dataset is looped through and the desired variables of 'total volume', 'starting price', and 'ending price' are collected utilizing:
 
-'''
-'4) Loop through tickers
-    For i = 0 To 11
+
+       '4) Loop through tickers
+        For i = 0 To 11
         ticker = tickers(i)
         totalVolume = 0
         
@@ -68,12 +68,12 @@ The dataset is looped through and the desired variables of 'total volume', 'star
             End If
 
             Next j
-'''
+
 
 The collected variables are then transferred into a new spreadsheet and sorted according to 'Stock Ticker', 'Total Volume', and 'Return'
 
-'''
-  '6) Output data for current ticker
+
+     '6) Output data for current ticker
        Worksheets("All Stocks Analysis").Activate
        
        Cells(4 + i, 1).Value = ticker
@@ -81,7 +81,7 @@ The collected variables are then transferred into a new spreadsheet and sorted a
        Cells(4 + i, 3).Value = (endingPrice / startingPrice) - 1
        
     Next i
-'''
+
 
 After formatting to colorcode the returns for each stock option, the analysis of the 2017 stock data shows:
 ![All Stocks Analysis 2017]()
