@@ -103,24 +103,24 @@ After the code has been refactored, the run time of the script is 1/3 of the ini
 The main sections of code that were modified in order to run the data through less loops were:
 1) The creation of output arrays instead of variables, and
 
-     '1a) Create a ticker Index
-    Dim tickerIndex As Integer
+         '1a) Create a ticker Index
+         Dim tickerIndex As Integer
     
-    tickerIndex = 0
+          tickerIndex = 0
     
 
-    '1b) Create three output arrays
+         '1b) Create three output arrays
     
-    Dim tickerVolumes(12) As Long
+         Dim tickerVolumes(12) As Long
     
-    Dim tickerStartingPrices(12) As Single
+         Dim tickerStartingPrices(12) As Single
     
-    Dim tickerEndingPrices(12) As Single
+         Dim tickerEndingPrices(12) As Single
 
 2) The singular loop that runs through the entire input spreadsheet
 
-    ''2b) Loop over all the rows in the spreadsheet.
-    For j = 2 To RowCount
+       ''2b) Loop over all the rows in the spreadsheet.
+          For j = 2 To RowCount
         
     
         '3a) Increase volume for current ticker
