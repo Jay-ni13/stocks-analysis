@@ -85,20 +85,20 @@ The collected variables are then transferred into a new spreadsheet and sorted a
 
 After formatting to colorcode the returns for each stock option, the analysis of the 2017 stock data shows:
 
-![All Stocks Analysis 2017]()
+![All Stocks Analysis 2017](https://github.com/Jay-ni13/stocks-analysis/blob/main/Resources/All_Stocks_Analysis_2017.png)
 
 When the macro is run again for the 2018 stock data, it shows the returns for these green stock options is much lower than 2017:
 
-![All Stocks Analysis 2018]()
+![All Stocks Analysis 2018](https://github.com/Jay-ni13/stocks-analysis/blob/main/Resources/All_Stocks_Analysis_2018.png)
 
 ### Refactored Code Analysis
 When VBA's timer function is implemented, the run time of the original script is: 
 
-![Original Script Execution Time]()
+![Original Script Execution Time](https://github.com/Jay-ni13/stocks-analysis/blob/main/Resources/VBA_Challenge_2018.png)
 
-After the code has been refactored, the run time of the script is: 
+After the code has been refactored, the run time of the script is 1/3 of the initial script's runtime: 
 
-![Refactored Script Execution Time]()
+![Refactored Script Execution Time](https://github.com/Jay-ni13/stocks-analysis/blob/main/Resources/VBA_Challenge_2018_Refactored.png)
 
 ## Summary
 
