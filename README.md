@@ -84,16 +84,20 @@ The collected variables are then transferred into a new spreadsheet and sorted a
 
 
 After formatting to colorcode the returns for each stock option, the analysis of the 2017 stock data shows:
+
 ![All Stocks Analysis 2017]()
 
 When the macro is run again for the 2018 stock data, it shows the returns for these green stock options is much lower than 2017:
+
 ![All Stocks Analysis 2018]()
 
 ### Refactored Code Analysis
 When VBA's timer function is implemented, the run time of the original script is: 
+
 ![Original Script Execution Time]()
 
 After the code has been refactored, the run time of the script is: 
+
 ![Refactored Script Execution Time]()
 
 ## Summary
