@@ -100,6 +100,57 @@ After the code has been refactored, the run time of the script is 1/3 of the ini
 
 ![Refactored Script Execution Time](https://github.com/Jay-ni13/stocks-analysis/blob/main/Resources/VBA_Challenge_2018_Refactored.png)
 
+The main sections of code that were modified in order to run the data through less loops were:
+1) The creation of output arrays instead of variables, and
+
+     '1a) Create a ticker Index
+    Dim tickerIndex As Integer
+    
+    tickerIndex = 0
+    
+
+    '1b) Create three output arrays
+    
+    Dim tickerVolumes(12) As Long
+    
+    Dim tickerStartingPrices(12) As Single
+    
+    Dim tickerEndingPrices(12) As Single
+
+2) The singular loop that runs through the entire input spreadsheet
+
+    ''2b) Loop over all the rows in the spreadsheet.
+    For j = 2 To RowCount
+        
+    
+        '3a) Increase volume for current ticker
+        If Cells(j, 1).Value = tickers(tickerIndex) Then
+        tickerVolumes(tickerIndex) = tickerVolumes(tickerIndex) + Cells(j, 8).Value
+        
+        End If
+        
+        '3b) Check if the current row is the first row with the selected tickerIndex.
+        If Cells(j, 1).Value = tickers(tickerIndex) And Cells(j - 1, 1).Value <> tickers(tickerIndex) Then
+            tickerStartingPrices(tickerIndex) = Cells(j, 6).Value
+            
+            
+        End If
+        
+        '3c) check if the current row is the last row with the selected ticker
+         'If the next row's ticker doesn't match, increase the tickerIndex.
+         
+        If Cells(j, 1).Value = tickers(tickerIndex) And Cells(j + 1, 1).Value <> tickers(tickerIndex) Then
+            tickerEndingPrices(tickerIndex) = Cells(j, 6).Value
+            
+
+            '3d Increase the tickerIndex.
+            tickerIndex = tickerIndex + 1
+            
+        End If
+        
+        Next j
+        
+
 ## Summary
 
 ### Code Refactoring
